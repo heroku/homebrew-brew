@@ -1,0 +1,7 @@
+machine:
+  xcode:
+    version: 8.3
+
+test:
+  override:
+    - ./scripts/test

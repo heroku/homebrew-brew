@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -ex
+
+brew install Formula/heroku.rb
+heroku version
+heroku help
