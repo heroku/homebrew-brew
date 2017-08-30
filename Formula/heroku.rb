@@ -1,20 +1,13 @@
-require "language/node"
-
 class Heroku < Formula
-  desc "Command-line client for the cloud PaaS"
+  desc "Everything you need to get started with Heroku"
   homepage "https://cli.heroku.com"
-  url "https://registry.npmjs.org/heroku-cli/-/heroku-cli-6.13.19.tgz"
-  sha256 "c46e8c4f44126ba1f9a3ea19439bd75bc945aa52cd5b6cf8b34759a333fb70cf"
-  head "https://github.com/heroku/cli.git"
-
-  depends_on "node"
+  url "https://cli-assets.heroku.com/heroku-cli/channels/stable/heroku-cli-v6.14.2-3079935-darwin-x64.tar.xz"
+  version "6.14.2-3079935"
+  sha256 "a466e66cad83e578029ff19c5f52a561cff85c6f3af4ac31d23361f16ec173a8"
 
   def install
-    inreplace "bin/run.js", "npm update -g heroku-cli", "brew upgrade heroku"
-    inreplace "bin/run", "node \"$DIR/run.js\"",
-                         "#{Formula["node"].opt_bin}/node \"$DIR/run.js\""
-    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
-    bin.install_symlink Dir["#{libexec}/bin/*"]
+    libexec.install Dir["*"]
+    bin.install_symlink libexec/"bin/heroku"
   end
 
   test do
