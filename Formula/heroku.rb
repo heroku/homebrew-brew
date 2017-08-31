@@ -1,9 +1,9 @@
 class Heroku < Formula
   desc "Everything you need to get started with Heroku"
   homepage "https://cli.heroku.com"
-  url "https://cli-assets.heroku.com/heroku-cli/channels/stable/heroku-cli-v6.14.8-bbc09e1-darwin-x64.tar.xz"
-  version "6.14.8-bbc09e1"
-  sha256 "a466e66cad83e578029ff19c5f52a561cff85c6f3af4ac31d23361f16ec173a8"
+  url "https://cli-assets.heroku.com/heroku-cli/channels/stable/heroku-cli-v6.14.9-fdcf18a-darwin-x64.tar.xz"
+  version "6.14.9-fdcf18a"
+  sha256 "b249b37c73f5b513e1ecc0c88bd18932652e0698f1a6cf9deef595030ef9967b"
 
   def install
     libexec.install Dir["*"]
