@@ -1,6 +1,13 @@
 machine:
   xcode:
-    version: 8.3
+    version: 9.1
+
+dependencies:
+  cache_directories:
+    - ~/Library/Caches/Homebrew
+  pre:
+    - brew update
+    - brew cleanup
 
 test:
   override:
