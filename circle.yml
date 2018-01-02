@@ -5,6 +5,8 @@ machine:
 dependencies:
   cache_directories:
     - ~/Library/Caches/Homebrew
+    - /usr/local/Homebrew/Library/Taps/caskroom
+    - /usr/local/Homebrew/Library/Taps/homebrew
   pre:
     - brew update
     - brew cleanup
