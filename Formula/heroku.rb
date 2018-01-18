@@ -1,8 +1,8 @@
 class Heroku < Formula
   desc "Everything you need to get started with Heroku"
   homepage "https://cli.heroku.com"
-  url "https://cli-assets.heroku.com/homebrew/heroku-6.15.15.tar.xz"
-  sha256 "e68c9f2ca6592c8c302a4d1b33905a4be1d7a8e978dc1b3590fb5b003fa360a9"
+  url "https://cli-assets.heroku.com/homebrew/heroku-6.15.16.tar.xz"
+  sha256 "227c6a644eac36b8f3965fabb160605ed612e86f3c34c7b82331852ee452de22"
   depends_on "heroku/brew/heroku-node"
 
   def install
