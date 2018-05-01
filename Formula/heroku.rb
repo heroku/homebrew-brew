@@ -8,6 +8,7 @@ class Heroku < Formula
   def install
     inreplace "bin/heroku", "\"$DIR/node\"", "#{Formula["heroku-node"].opt_share}/node"
     libexec.install Dir["*"]
+    libexec.install Dir[".oclif.manifest.json"]
     bin.install_symlink libexec/"bin/heroku"
   end
 
