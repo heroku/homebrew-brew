@@ -1,0 +1,20 @@
+test:
+  override:
+    - ./scripts/test
+version: 2
+jobs:
+  test:
+    macos:
+      xcode: 9.3.1
+    steps:
+      - checkout
+      - run: |
+          brew update
+          brew cleanup
+          ./scripts/test
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
