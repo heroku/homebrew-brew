@@ -6,6 +6,7 @@ class Heroku < Formula
   depends_on "heroku/brew/heroku-node"
 
   def install
+    inreplace "bin/heroku", /^CLIENT_HOME=/, "export HEROKU_OCLIF_CLIENT_HOME=#{lib/"client"}\nCLIENT_HOME="
     inreplace "bin/heroku", "\"$DIR/node\"", "#{Formula["heroku-node"].opt_share}/node"
     libexec.install Dir["*"]
     bin.install_symlink libexec/"bin/heroku"
