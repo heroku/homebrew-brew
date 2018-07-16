@@ -10,6 +10,19 @@ class Heroku < Formula
     inreplace "bin/heroku", "\"$DIR/node\"", "#{Formula["heroku-node"].opt_share}/node"
     libexec.install Dir["*"]
     bin.install_symlink libexec/"bin/heroku"
+
+    bash_completions.install "./packages/autocomplete/autocomplete/brew/bash"
+    zsh_completions.install "./packages/autocomplete/autocomplete/brew/zsh"
+    system "heroku", "autocomplete", "--refresh-cache"
+  end
+
+  def caveats; <<~EOS
+    To install and use Heroku's autocomplete:
+      1) Install homebrew's completion, if not already installed
+        OR
+      2) Run
+          $ heroku autocomplete
+  EOS
   end
 
   test do
