@@ -12,7 +12,7 @@ class Heroku < Formula
     bin.install_symlink libexec/"bin/heroku"
 
     bash_completion.install "./packages/autocomplete/autocomplete/brew/bash"
-    zsh_completion.install "./packages/autocomplete/autocomplete/brew/zsh"
+    zsh_completion.install "./packages/autocomplete/autocomplete/brew/zsh/_heroku"
     system "heroku", "autocomplete", "--refresh-cache"
   end
 
