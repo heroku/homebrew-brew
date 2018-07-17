@@ -18,7 +18,7 @@ class Heroku < Formula
 
   def caveats; <<~EOS
     To use the Heroku CLI's autocomplete:
-      1) Install homebrew's shell completion - https://docs.brew.sh/Shell-Completion
+      1) Use homebrew's shell completion - https://docs.brew.sh/Shell-Completion
         OR
       2) Run and follow the install steps:
           $ heroku autocomplete
