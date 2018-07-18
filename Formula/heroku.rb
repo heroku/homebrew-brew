@@ -13,7 +13,7 @@ class Heroku < Formula
 
     bash_completion.install "#{libexec}/node_modules/@heroku-cli/plugin-autocomplete/autocomplete/brew/bash"
     zsh_completion.install "#{libexec}/node_modules/@heroku-cli/plugin-autocomplete/autocomplete/brew/zsh/_heroku"
-    system bin/"heroku", "autocomplete", "--refresh-cache"
+    system bin/"heroku", "autocomplete", "bash", "--refresh-cache"
   end
 
   def caveats; <<~EOS
