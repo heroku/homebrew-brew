@@ -1,8 +1,8 @@
 class HerokuNode < Formula
   desc "node.js dependency for heroku"
   homepage "https://cli.heroku.com"
-  url "https://cli-assets.heroku.com/homebrew/node-10.12.0.tar.xz"
-  sha256 "569184febbe9b2cb432745656ae3b544367c00aaac3f27f39a1b32fb07f54eab"
+  url "https://cli-assets.heroku.com/homebrew/node-11.0.0.tar.xz"
+  sha256 "52502f47a45a964570148571c16d5c7f4d2367c621decee1005f326286720aca"
 
   def install
     share.install buildpath/"node"
