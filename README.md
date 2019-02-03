@@ -5,6 +5,7 @@ Heroku Homebrew Tap
 
 Install the Heroku CLI with
 
+    $ brew tap heroku/brew
     $ brew install heroku/brew/heroku
 
 For more information, visit https://cli.heroku.com
