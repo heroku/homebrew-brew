@@ -14,6 +14,10 @@ class Heroku < Formula
     bash_completion.install "#{libexec}/node_modules/@heroku-cli/plugin-autocomplete/autocomplete/brew/bash"
     zsh_completion.install "#{libexec}/node_modules/@heroku-cli/plugin-autocomplete/autocomplete/brew/zsh/_heroku"
   end
+  
+  def post_install
+    system "heroku", "autocomplete", "--refresh-cache"
+  end
 
   def caveats; <<~EOS
     To use the Heroku CLI's autocomplete --
