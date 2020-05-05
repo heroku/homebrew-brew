@@ -7,12 +7,12 @@ class Heroku < Formula
 
   def install
     inreplace "bin/heroku", /^CLIENT_HOME=/, "export HEROKU_OCLIF_CLIENT_HOME=#{lib/"client"}\nCLIENT_HOME="
-    inreplace "bin/heroku", "\"$DIR/node\"", "#{Formula["heroku-node"].opt_share}/node"
+    inreplace "bin/heroku", "\"$DIR/node\"", Formula["heroku-node"].opt_share/"node"
     libexec.install Dir["*"]
     bin.install_symlink libexec/"bin/heroku"
 
-    bash_completion.install "#{libexec}/node_modules/@heroku-cli/plugin-autocomplete/autocomplete/brew/bash"
-    zsh_completion.install "#{libexec}/node_modules/@heroku-cli/plugin-autocomplete/autocomplete/brew/zsh/_heroku"
+    bash_completion.install libexec/"node_modules/@heroku-cli/plugin-autocomplete/autocomplete/brew/bash"
+    zsh_completion.install libexec/"node_modules/@heroku-cli/plugin-autocomplete/autocomplete/brew/zsh/_heroku"
   end
 
   def caveats; <<~EOS
