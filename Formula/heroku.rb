@@ -1,21 +1,22 @@
 class Heroku < Formula
   desc "Everything you need to get started with Heroku"
   homepage "https://cli.heroku.com"
+  version: "7.41.1"
+
   if OS.mac?
-    url "https://cli-assets.heroku.com/heroku-v7.41.1/heroku-v7.41.1.tar.xz"
+    url "https://cli-assets.heroku.com/heroku-v#{version}/heroku-v#{version}.tar.xz"
     sha256 "2b0412e8ac2400ba587bbc38c969b3785a5e9d142dc77656b2a8f33b3398348a"
+
+    depends_on "heroku/brew/heroku-node"
+
   elsif OS.Linux?
     if Hardware::CPU.intel?
       # No version for the linux gz?
-      url "https://cli-assets.heroku.com/heroku-linux-x64.tar.gz"
-      sha256 "5d1ef7e843738d597cd0360d07558832e4c8c91a2a6ffac3c671bbb4b6aab87c"
+      url "https://cli-assets.heroku.com/heroku-v#{version}/heroku-v#{version}-linux-x64.tar.gz"
     else # arm
-      url "https://cli-assets.heroku.com/heroku-v7.41.1/heroku-v7.41.1-linux-arm.tar.gz"
-      sha256 "af69532cb9ef95ae6447a2bc7f86149ed0057748dbca4f634ec167977b48f2d0"
+      url "https://cli-assets.heroku.com/heroku-v#{version}/heroku-v#{version}-linux-arm.tar.gz"
     end
   end
-
-  depends_on "heroku/brew/heroku-node"
 
   def install
     inreplace "bin/heroku", /^CLIENT_HOME=/, "export HEROKU_OCLIF_CLIENT_HOME=#{lib/"client"}\nCLIENT_HOME="
