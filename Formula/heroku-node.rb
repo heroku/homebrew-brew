@@ -5,9 +5,9 @@
 class HerokuNode < Formula
   desc "node.js dependency for heroku"
   homepage "https://cli.heroku.com"
-  url "https://nodejs.org/download/release/v12.21.0/node-v12.21.0-darwin-x64.tar.xz"
-  version "12.21.0"
-  sha256 "4184cc5412cdf256996aa7f559859abc355b48f03144349cf8531b6bf0526f49"
+  url "https://nodejs.org/download/release/v14.19.0/node-v14.19.0-darwin-x64.tar.xz"
+  version "14.19.0"
+  sha256 "fe344d2184303c6ca79ac4c9cb1391f15b9c00ad9c82366737f35037301e15f8"
   keg_only "heroku-node is only used by Heroku CLI (heroku/brew/heroku), which explicitly requires from Cellar"
 
   def install

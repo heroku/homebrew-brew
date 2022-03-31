@@ -5,9 +5,9 @@
 class Heroku < Formula
   desc "Everything you need to get started with Heroku"
   homepage "https://cli.heroku.com"
-  url "https://cli-assets.heroku.com/heroku-v7.59.4/heroku-v7.59.4.tar.xz"
-  sha256 "1e9066f8158c470eab48a6823fb042d22c2078c7ae4690ab04bb7866fdec67ec"
-  depends_on "heroku/brew/heroku-node" => "12.21.0"
+  url "https://cli-assets.heroku.com/heroku-v7.60.1/heroku-v7.60.1.tar.xz"
+  sha256 "d220d2f78052b5bc9113f9b74b38201eeee76234d826c8fd47b3e49ddce4b31a"
+  depends_on "heroku/brew/heroku-node" => "14.19.0"
 
   def install
     inreplace "bin/heroku", /^CLIENT_HOME=/, "export HEROKU_OCLIF_CLIENT_HOME=#{lib/"client"}\nCLIENT_HOME="
