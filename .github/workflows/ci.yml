@@ -15,4 +15,4 @@ jobs:
           xcode-version: latest-stable
       - run: brew update
       - run: brew cleanup
-      - run: ../../../scripts/test
+      - run: ./scripts/test
