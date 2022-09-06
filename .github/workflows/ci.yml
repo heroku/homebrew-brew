@@ -1,0 +1,17 @@
+name: Node CI Suite
+
+on:
+  push
+
+jobs:
+  test:
+
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v3, maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: 9.4.0
+      - run: brew update
+      - run: brew cleanup
+      - run: ./../scripts/test
