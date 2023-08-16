@@ -5,15 +5,15 @@
 class Heroku < Formula
   desc "Everything you need to get started with Heroku"
   homepage "https://cli.heroku.com"
-  url "https://cli-assets.heroku.com/versions/8.1.9/ba951f2/heroku-v8.1.9-ba951f2-darwin-x64.tar.xz"
-  sha256 "0d904e9a3ccb34ab807585e68daa34863003791c6dcbd89db7fe8a747b9ee585"
-  version "8.1.9"
+  url "https://cli-assets.heroku.com/versions/8.3.0/16f4f8e/heroku-v8.3.0-16f4f8e-darwin-x64.tar.xz"
+  sha256 "06f1adc3481a6c5f7b8fc527ecf9e297608e0f0f09760892eb33a7ad686371fe"
+  version "8.3.0"
   version_scheme 1
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://cli-assets.heroku.com/versions/8.1.9/ba951f2/heroku-v8.1.9-ba951f2-darwin-arm64.tar.xz"
-      sha256 "d69d6c63c1c7b6a573e3f681ea0453f5a75d67cd5e6067199a171111e43e1e9c"
+      url "https://cli-assets.heroku.com/versions/8.3.0/16f4f8e/heroku-v8.3.0-16f4f8e-darwin-arm64.tar.xz"
+      sha256 "f9b7cddd5c18ba9315993ae95b02a361fc3a7f104b497c0f3ac835f811df0348"
     end
   end
 
@@ -22,8 +22,8 @@ class Heroku < Formula
     libexec.install Dir["*"]
     bin.install_symlink libexec/"bin/heroku"
 
-    bash_completion.install libexec/"node_modules/@heroku-cli/plugin-autocomplete/autocomplete/brew/bash" => "heroku"
-    zsh_completion.install libexec/"node_modules/@heroku-cli/plugin-autocomplete/autocomplete/brew/zsh/_heroku"
+    bash_completion.install libexec/"autocomplete-scripts/brew/bash" => "heroku"
+    zsh_completion.install libexec/"autocomplete-scripts/brew/zsh/_heroku"
   end
 
   def caveats; <<~EOS
