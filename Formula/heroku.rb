@@ -5,15 +5,15 @@
 class Heroku < Formula
   desc "Everything you need to get started with Heroku"
   homepage "https://cli.heroku.com"
-  url "https://cli-assets.heroku.com/versions/8.4.0/15952b9/heroku-v8.4.0-15952b9-darwin-x64.tar.xz"
-  sha256 "daac9c85f028da163950b8f84e5c07b15d86a09327d46884d179a0014eb82cc3"
-  version "8.4.0"
+  url "https://cli-assets.heroku.com/versions/8.4.1/a3a203b/heroku-v8.4.1-a3a203b-darwin-x64.tar.xz"
+  sha256 "eb6b70df1585d62c25c92c5e9289f1cbf7f986eff3b040bf8ee944d16c62a419"
+  version "8.4.1"
   version_scheme 1
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://cli-assets.heroku.com/versions/8.4.0/15952b9/heroku-v8.4.0-15952b9-darwin-arm64.tar.xz"
-      sha256 "1022ac0fe2e2b3962073b38e65a0c04fd182173f9f55d810b45e746eea33a063"
+      url "https://cli-assets.heroku.com/versions/8.4.1/a3a203b/heroku-v8.4.1-a3a203b-darwin-arm64.tar.xz"
+      sha256 "f9ea81ddcbed5bd1d13740816fd2390fb2a582700ee1e1c38334ff9e6337f8e4"
     end
   end
 
