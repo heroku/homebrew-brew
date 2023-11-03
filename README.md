@@ -1,7 +1,7 @@
 Heroku Homebrew Tap
 -------------------
 
-[![CircleCI](https://circleci.com/gh/heroku/homebrew-brew.svg?style=svg)](https://circleci.com/gh/heroku/homebrew-brew)
+![GitHub Actions CI](https://github.com/heroku/homebrew-brew/actions/workflows/ci.yml/badge.svg)
 
 Install the Heroku CLI with
 
