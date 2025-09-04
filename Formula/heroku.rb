@@ -5,26 +5,26 @@
 class Heroku < Formula
   desc "Everything you need to get started with Heroku"
   homepage "https://cli.heroku.com"
-  url "https://cli-assets.heroku.com/versions/10.13.0/d153f43/heroku-v10.13.0-d153f43-darwin-x64.tar.xz"
-  sha256 "06ae40f1b095139413ab2fb12efe3d0f7c4e8f06da855989d62e1558bbadba9f"
-  version "10.13.0"
+  url "https://cli-assets.heroku.com/versions/10.13.1/cf943a6/heroku-v10.13.1-cf943a6-darwin-x64.tar.xz"
+  sha256 "b5402091afa9f3c0d6dae3cdc9b214c0cba03a409cf62bf06b83eae102413bcc"
+  version "10.13.1"
   version_scheme 1
 
   on_macos do
     on_arm do
-      url "https://cli-assets.heroku.com/versions/10.13.0/d153f43/heroku-v10.13.0-d153f43-darwin-arm64.tar.xz"
-      sha256 "6f7c4195f9fff6dd9194d00cf4af30de302d4988036a88224af57ebbd9c54b19"
+      url "https://cli-assets.heroku.com/versions/10.13.1/cf943a6/heroku-v10.13.1-cf943a6-darwin-arm64.tar.xz"
+      sha256 "73ec0b6f96922a51b2bab1debd19954b855d1ab5eedb633f1f4d7d5ce52293d7"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://cli-assets.heroku.com/versions/10.13.0/d153f43/heroku-v10.13.0-d153f43-linux-x64.tar.xz"
-      sha256 "fc03c69faeb72661fe9de2d77df928200cc752ef52fe2ac8531531400f203618"
+      url "https://cli-assets.heroku.com/versions/10.13.1/cf943a6/heroku-v10.13.1-cf943a6-linux-x64.tar.xz"
+      sha256 "be7fccd51aeaa87189ea72353ff1c95a88af17c0a71d0bfaabe17fb6341cd8b5"
     end
     on_arm do
-      url "https://cli-assets.heroku.com/versions/10.13.0/d153f43/heroku-v10.13.0-d153f43-linux-arm.tar.xz"
-      sha256 "f2ccf75fad3d7c913b6ad1fbf719c9c574b7a7a3406cc8db191b24183993dcb0"
+      url "https://cli-assets.heroku.com/versions/10.13.1/cf943a6/heroku-v10.13.1-cf943a6-linux-arm.tar.xz"
+      sha256 "d73b466af7c93044e7a02af4fe8d3dcdde6e1e6ce1f0cb003d2a77177287235c"
     end
   end
 
