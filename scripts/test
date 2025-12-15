@@ -3,6 +3,19 @@
 set -ex
 
 brew update
-brew install Formula/heroku.rb
+
+# Get the directory where this script is located
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_DIR="$(dirname "$SCRIPT_DIR")"
+
+# Force untap if already tapped to avoid remote mismatch conflicts
+brew untap --force heroku/brew 2>/dev/null || true
+
+# Tap the local repository as heroku/brew
+brew tap heroku/brew "$REPO_DIR"
+
+# Install from the tap
+brew install heroku/brew/heroku
+
 heroku version
 heroku help
