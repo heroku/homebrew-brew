@@ -5,26 +5,26 @@
 class Heroku < Formula
   desc "Everything you need to get started with Heroku"
   homepage "https://cli.heroku.com"
-  url "https://cli-assets.heroku.com/versions/11.8.0/f6c5342/heroku-v11.8.0-f6c5342-darwin-x64.tar.xz"
-  sha256 "5dc5ca678df27f1cbdfe2cc50e347af3760b71478e128c7b65987a73bfcf86f1"
-  version "11.8.0"
+  url "https://cli-assets.heroku.com/versions/11.8.1/40e79ad/heroku-v11.8.1-40e79ad-darwin-x64.tar.xz"
+  sha256 "1027db79be93943c6f0d16150c729caf941ba0220f6b830e22ef538bcdd7b8b5"
+  version "11.8.1"
   version_scheme 1
 
   on_macos do
     on_arm do
-      url "https://cli-assets.heroku.com/versions/11.8.0/f6c5342/heroku-v11.8.0-f6c5342-darwin-arm64.tar.xz"
-      sha256 "ed015e9137c5753af635c1d9a0feeb9ee2716fc8903d2ceab9ca93376e8302d6"
+      url "https://cli-assets.heroku.com/versions/11.8.1/40e79ad/heroku-v11.8.1-40e79ad-darwin-arm64.tar.xz"
+      sha256 "813e20c9716d2a956d58a1bb34f936406f4bdde7d4716c0720ed56a0bef995c4"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://cli-assets.heroku.com/versions/11.8.0/f6c5342/heroku-v11.8.0-f6c5342-linux-x64.tar.xz"
-      sha256 "924f2e031305bfc6f39e1d8e929c43bbc0ac0c2f0e56efd1087de0683e6844b2"
+      url "https://cli-assets.heroku.com/versions/11.8.1/40e79ad/heroku-v11.8.1-40e79ad-linux-x64.tar.xz"
+      sha256 "c233cf40ebcfd4906ee975cbf658b9f9a725a548911675dbc5a55e38a9344839"
     end
     on_arm do
-      url "https://cli-assets.heroku.com/versions/11.8.0/f6c5342/heroku-v11.8.0-f6c5342-linux-arm.tar.xz"
-      sha256 "66bef7728fbde6ffaf795140c8532060484e9124f5db457f2938e8142eabe544"
+      url "https://cli-assets.heroku.com/versions/11.8.1/40e79ad/heroku-v11.8.1-40e79ad-linux-arm.tar.xz"
+      sha256 "320bc418b4395b7b2881919749ae4ddad17ddabc3bba070f300bdc650b6f49e8"
     end
   end
 
