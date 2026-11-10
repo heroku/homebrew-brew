@@ -5,22 +5,22 @@
 class Heroku < Formula
   desc "Everything you need to get started with Heroku"
   homepage "https://cli.heroku.com"
-  url "https://cli-assets.heroku.com/versions/11.12.1/41f59c1/heroku-v11.12.1-41f59c1-darwin-x64.tar.xz"
-  sha256 "f88862ce394e2841cd65cf9a6db4face27387684251b552a00d4d20bff44af8b"
-  version "11.12.1"
+  url "https://cli-assets.heroku.com/versions/11.13.0/77c0f7f/heroku-v11.13.0-77c0f7f-darwin-x64.tar.xz"
+  sha256 "b0c7717cd07a81ac83efb8030ff43acbd53c27ee01bb354dfe6c89b0e32a6f2a"
+  version "11.13.0"
   version_scheme 1
 
   on_macos do
     on_arm do
-      url "https://cli-assets.heroku.com/versions/11.12.1/41f59c1/heroku-v11.12.1-41f59c1-darwin-arm64.tar.xz"
-      sha256 "38a7e2e2188676ee57d25776afed943c5fb5b584cbcaa4b1d55ab3d697d1c439"
+      url "https://cli-assets.heroku.com/versions/11.13.0/77c0f7f/heroku-v11.13.0-77c0f7f-darwin-arm64.tar.xz"
+      sha256 "ccc587ddac56f764b136125245b70af8b7686925c52adf06dbd6d8af2006c219"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://cli-assets.heroku.com/versions/11.12.1/41f59c1/heroku-v11.12.1-41f59c1-linux-x64.tar.xz"
-      sha256 "241ebfd6da0e540ecdbc50655099b3410db682554f4e506c9ea406c312a55e73"
+      url "https://cli-assets.heroku.com/versions/11.13.0/77c0f7f/heroku-v11.13.0-77c0f7f-linux-x64.tar.xz"
+      sha256 "08b23086e3d71fca607878014033e54d964d6f160efdec5c9d66959b1af5bfd5"
     end
     on_arm do
       # Homebrew's on_arm matches any ARM CPU, so serve the build that matches
@@ -28,11 +28,11 @@ class Heroku < Formula
       # (armhf) build otherwise. Serving the wrong one installs a binary the
       # machine cannot execute ("Exec format error" — see #3919).
       if Hardware::CPU.is_64_bit?
-        url "https://cli-assets.heroku.com/versions/11.12.1/41f59c1/heroku-v11.12.1-41f59c1-linux-arm64.tar.xz"
-        sha256 "6503e0d53dc335a9585e3b420b27fb43c0ac0e4ac3dc078374e3563c37f0c822"
+        url "https://cli-assets.heroku.com/versions/11.13.0/77c0f7f/heroku-v11.13.0-77c0f7f-linux-arm64.tar.xz"
+        sha256 "8baa39f4aca895807d48c95ab47c6192cade808507331e05d116cabb2c3992d7"
       else
-        url "https://cli-assets.heroku.com/versions/11.12.1/41f59c1/heroku-v11.12.1-41f59c1-linux-arm.tar.xz"
-        sha256 "be4d913db666e1cdb1631479457ef333a5d19871a8d56943195d78ea06c8416d"
+        url "https://cli-assets.heroku.com/versions/11.13.0/77c0f7f/heroku-v11.13.0-77c0f7f-linux-arm.tar.xz"
+        sha256 "368dcfb6317506c97ae360f26db9b4cb4eb158f5f708a15e2bbb7b2a49d5f92a"
       end
     end
   end
